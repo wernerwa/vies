@@ -89,7 +89,7 @@ class ValidatorFR extends ValidatorAbstract
     private function validateOld(string $vatNumber): string
     {
         $checkVal = substr($vatNumber, 2);
-        if (!ctype_digit($checkVal)) {
+        if (! ctype_digit($checkVal)) {
             return "";
         }
         $checkVal .= "12";
